@@ -1,0 +1,50 @@
+.persons {
+  height: 50vh;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: inherit;
+  }
+
+  /* ползунок скроллбара */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    box-shadow: inset 1px 1px 10px #13049b;
+  }
+
+  &-item {
+    border-radius: 12px;
+    transition: 0.4s;
+    margin-bottom: 5px;
+    width: calc(100% - 16px) !important;
+
+    &:hover {
+      background: rgb(247, 247, 247);
+      cursor: pointer;
+      transition: 0.4s;
+
+      .arrow {
+        border-bottom: 3px solid rgb(189, 189, 189);
+        border-right: 3px solid rgb(189, 189, 189);
+        width: 8px;
+        height: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.active-item {
+  background: rgb(240, 240, 240);
+  &:hover {
+    background: rgb(240, 240, 240);
+  }
+  .arrow {
+    border-bottom: 3px solid rgb(143, 143, 143);
+    border-right: 3px solid rgb(143, 143, 143);
+    width: 8px;
+    height: 8px;
+    transform: rotate(-45deg);
+  }
+}
