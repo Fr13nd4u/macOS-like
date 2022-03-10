@@ -1,0 +1,20 @@
+.person-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.person-contacts {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 20px 15px;
+
+  &-item {
+    display: grid !important;
+    grid-template-columns: 1fr 5fr;
+    justify-items: start;
+  }
+}

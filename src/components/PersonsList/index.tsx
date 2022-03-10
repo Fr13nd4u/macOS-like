@@ -1,5 +1,4 @@
-import React, { FC, useContext } from "react";
-import { Context } from "../../context";
+import React, { FC } from "react";
 import PersonsItem from "./PersonsItem";
 
 import "./Persons.scss";
@@ -7,9 +6,8 @@ import "./Persons.scss";
 const PersonsList: FC<Props> = ({
   showPersonDescroption,
   activePerson,
+  data,
 }: Props) => {
-  const data = useContext(Context);
-
   return (
     <ul className="persons">
       {data.map((item: TData) => (
@@ -24,11 +22,6 @@ const PersonsList: FC<Props> = ({
   );
 };
 
-interface Props {
-  showPersonDescroption: (index: number) => void;
-  activePerson: number;
-}
-
 type TData = {
   id: number;
   name: string;
@@ -38,5 +31,11 @@ type TData = {
   url: string;
   email: string;
 };
+
+interface Props {
+  showPersonDescroption: (index: number) => void;
+  activePerson: number;
+  data: [TData];
+}
 
 export default PersonsList;

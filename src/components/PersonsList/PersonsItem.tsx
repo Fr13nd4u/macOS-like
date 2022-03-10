@@ -29,7 +29,7 @@ const PersonsItem: FC<Props> = ({
   return (
     <ListItem
       secondaryAction={
-        <IconButton edge="end" aria-label="delete">
+        <IconButton disabled>
           <span className="arrow"></span>
         </IconButton>
       }
